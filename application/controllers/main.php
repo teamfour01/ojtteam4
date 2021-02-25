@@ -24,9 +24,6 @@ class main extends CI_Controller {
 	{
 		$this->load->view('index');
 	}
-	public function w()
-	{
-		$this->load->view('w');
-	}
+	
 }
 	
