@@ -350,18 +350,20 @@ public function airportdetails()
     $this->mainmodel->deleteairport($id);
     redirect('main/airportdetails','refresh');
 }
-//airport updation
+    //airport updation
 public function airportupdateview()
     {
        
         $this->load->model('mainmodel');
-        $id=$this->session->id;
+        $id=$this->uri->segment(3);
+        //$id=$this->session->id;
         $data['user_data']=$this->mainmodel->airportupdateform($id);
         $this->load->view('airportupdate',$data);
 
     }
     public function airportupdate1()
     {
+        $this->load->model('mainmodel');
         $a=array("aname"=>$this->input->post("aname"),
             "cntry"=>$this->input->post("cntry"),
             "state"=>$this->input->post("state"),
@@ -371,13 +373,15 @@ public function airportupdateview()
        
         if($this->input->post("update"))
         {
-            $id=$this->session->id;
+           // $id=$this->session->id;
+            //$id=$this->uri->segment(3);
+            $id=$this->input->post("id");
             $this->mainmodel->airportupdateform1($a,$id);
-            redirect('main/airportupdateview','refresh');
+            redirect('main/airportdetails','refresh');
         }
 
     }
-
+}
 	
 
 	
