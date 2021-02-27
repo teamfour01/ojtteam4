@@ -1,7 +1,7 @@
 <html>
 <head>
 
-<title> ADMIN  </title>
+<title> USER  </title>
 <meta charset=utf-8>
             <meta name="viewport" content="width=device-width,initial-scale=1">
             <!---Fontawesome--->
@@ -99,10 +99,10 @@ color: rgba(0,0,0,0.7);
         <ul class="navbar-nav">
           <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/index">Home</a></li>
           <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/booking">Booking</a>
-          <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/regupdate">Profile</a>
+          <li class="nav-item"> <a class="nav-link" href="#">Profile</a>
             <div class="submenu1">
         <ul>
-          <li class="nav-item"> <a class="nav-link" href="#">update</a></li>
+          <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/regupdate"">update</a></li>
         </ul>
       </div>
           </li>

@@ -88,6 +88,9 @@ font-size: 50px;
 							<tr><td>Location:</td>
 									<td><input type="text" name="loc" required="required" maxlength="25" pattern="[a-zA-Z]+"></td></tr>
 							<tr><td><input type="submit" name="sub" value="Submit"></td></tr>
+
+
+
 			</table>
 	</fieldset>
 </form>

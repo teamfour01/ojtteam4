@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>first site</title>
+<title>search</title>
 <meta charset=utf-8>
             <meta name="viewport" content="width=device-width,initial-scale=1">
             <!---Fontawesome--->
@@ -24,6 +24,11 @@ font-size: 20px;
 background-image:url("../img/23.jpg");
 background-size:cover;
 }
+nav{
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.8);
+    
+    text-align: center;
 h3{
 text-align: center;
 color: red;
@@ -33,12 +38,28 @@ font-size: 50px;
 </style>
 </head>
 <body class="bi">
+  <body class="  bg-dark text-white">
+  <nav class="menubar">
+    <nav class=" navbar navbar-expand-lg top1">
+      <div class="container-fluid">
+          <a class="text-decoration-none text-white" href="#"><h1><h4>AFRS-Flight Search</h4></h1></a>
+      <div>
+        <ul class="navbar-nav">
+              <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/user">Home</a></li>
+              <li class="nav-item"> <a class="nav-link" href="#">Add </a></li>
+              <li class="nav-item"> <a class="nav-link" href="#">View</a></li>
+              <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/index">Logout</a></li>
+         </ul>
+        </div>
+    </div>
+  </nav>
+</nav>
 
 <h3 class="bg-primary text-white text-center">FLIGHT SEARCH</h3>
 <form style="margin-left: 450px" method="post" action="<?php echo base_url()?>main/searchaction">
 <fieldset style="width:430px;height:400px;background-color:rgba(0,0,0,0.3); margin-left: 20px; margin-top: 50px;">
 <legend><strong></strong></legend>
-<table>
+<table class="text-white">
 <tr>
 <td>
 Departure:</td>

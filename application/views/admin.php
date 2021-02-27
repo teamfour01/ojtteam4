@@ -47,11 +47,21 @@ background-size:cover;
   display:none;
   margin:10px;
 }
+.submenuz {
+  display:none;
+  margin:10px;
+}
 .submenu2 {
   display:none;
   margin:10px;
 }
 .menubar ul li:hover .submenu1 {
+  display:block;
+  position:absolute;
+  background-color:rgba(0,0,0,0.5);
+  border-radius:20px;
+}
+.menubar ul li:hover .submenuz {
   display:block;
   position:absolute;
   background-color:rgba(0,0,0,0.5);
@@ -67,6 +77,12 @@ background-size:cover;
   display:block;
 }
 .submenu1 ul li{
+  border-bottom:2px solid red;
+}
+.submenuz  ul{
+  display:block;
+}
+.submenuz ul li{
   border-bottom:2px solid red;
 }
 .submenu2  ul{
@@ -101,23 +117,32 @@ color: rgba(0,0,0,0.5);
           <li class="nav-item"> <a class="nav-link" href="#">ADD </a>
             <div class="submenu1">
         <ul>
-          <li class="nav-item"> <a class="nav-link" href="#">Flight Details</a></li>
+          <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/flightdetails">Flight Details</a></li>
           <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/airportdet">Airport Details</a></li>
-          <li class="nav-item"> <a class="nav-link" href="#">Notification</a></li>
         </ul>
       </div>
-          </li>
-          <li class="nav-item"> <a class="nav-link" href="#">VIEW</a>
-            <div class="submenu2">
+          <li class="nav-item"> <a class="nav-link" href="#">Notification</a>
+           <div class="submenuz">
               <ul>
-                <li class="nav-item"> <a class="nav-link" href="#">User Details</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/notificationadd">ADD</a></li>
 
-                    <li class="nav-item"> <a class="nav-link" href="#">Booking Details</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="#">Airport Details</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">VIEW</a></li>
+                    
               </ul>
             </div>
           </li>
-              <li class="nav-item"> <a class="nav-link" href="index.php">Logout</a></li>
+      
+          <li class="nav-item"> <a class="nav-link" href="#">VIEW</a>
+            <div class="submenu2">
+              <ul>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/regusertable">User Details</a></li>
+
+                    <li class="nav-item"> <a class="nav-link" href="#">Booking Details</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/airportdetails">Airport Details</a></li>
+              </ul>
+            </div>
+          </li>
+              <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/index">Logout</a></li>
     
             </ul> 
           </ul>

@@ -11,6 +11,13 @@
             <!---custom style---->
             <link rel="stylesheet" href="css/style.css">
 <style>
+	nav{
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.8);
+    
+    text-align: center;
+    
+  }
 	/*table,td{
 		padding: 20px;
 		font-size: 20px;
@@ -36,6 +43,21 @@ h1{
 	</style>
 </head>
 <body class="bi">
+	<nav class="menubar">
+    <nav class=" navbar navbar-expand-lg top1">
+      <div class="container-fluid">
+        	<a class="text-decoration-none text-white" href="#"><h1><h4>AFRS-Userview</h4></h1></a>
+      <div>
+        <ul class="navbar-nav">
+          		<li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/admin">Home</a></li>
+          		<li class="nav-item"> <a class="nav-link" href="#">Add </a></li>
+          		<li class="nav-item"> <a class="nav-link" href="#">View</a></li>
+          		<li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/index">Logout</a></li>
+         </ul>
+     		</div>
+ 		</div>
+	</nav>
+</nav>
 
 <h3 class="bg-primary text-white text-center">USER VIEW</h3>
 	<form method="post" action="">

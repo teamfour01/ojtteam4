@@ -11,7 +11,29 @@
             <!---custom style---->
             <link rel="stylesheet" href="css/style.css">
     </head>
-<body class=" mt-5 bg-dark text-white">
+    <style>
+      nav{
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.8);
+    
+    text-align: center;
+    </style>
+<body class="  bg-dark text-white">
+  <nav class="menubar">
+    <nav class=" navbar navbar-expand-lg top1">
+      <div class="container-fluid">
+          <a class="text-decoration-none text-white" href="#"><h1><h4>AFRS-Flight Details</h4></h1></a>
+      <div>
+        <ul class="navbar-nav">
+              <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/admin">Home</a></li>
+              <li class="nav-item"> <a class="nav-link" href="#">Add </a></li>
+              <li class="nav-item"> <a class="nav-link" href="#">View</a></li>
+              <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/index">Logout</a></li>
+         </ul>
+        </div>
+    </div>
+  </nav>
+</nav>
   <CENTER><h1>  FLIGHT DETAILS</h1></CENTER>  
 <fieldset>
 <form class="container" method="post" action="<?php echo base_url()?>main/addfdetails">
