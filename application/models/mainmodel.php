@@ -164,18 +164,20 @@ $this->db->select('*');
 $this->db->where('id',$id);
 $this->db->delete("airport");
 }
+
 //airport update
 public function airportupdateform($id)
 
 {
 $this->db->select('*');
+$this->db->where("id",$id);
 $qry=$this->db->get("airport");
 return $qry;
 }
 public function airportupdateform1 ($a,$id)
 {
         $this->db->select('*');
-        $qry=$this->db->where("id",$id);
+        $this->db->where("id",$id);
         $qry=$this->db->update("airport",$a);
         return $qry;
 
