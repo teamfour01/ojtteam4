@@ -97,8 +97,8 @@ color: rgba(0,0,0,0.7);
         <a class="text-decoration-none text-white" href="#"><h1><h4>AFRS-USER</h4></h1></a>
       <div>
         <ul class="navbar-nav">
-          <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/index">Home</a></li>
-          <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/booking">Booking</a>
+          <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/user">Home</a></li>
+          <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/searchflight">Booking</a>
           <li class="nav-item"> <a class="nav-link" href="#">Profile</a>
             <div class="submenu1">
         <ul>
@@ -109,8 +109,9 @@ color: rgba(0,0,0,0.7);
           <li class="nav-item"> <a class="nav-link" href="#">VIEW</a>
             <div class="submenu2">
               <ul>
-                    <li class="nav-item"> <a class="nav-link" href="#">Booking Details</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="#">Ticket view</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/viewbookinguser">Booking Details</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/ticket">Ticket view</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/viewnotif">View Notification</a></li>
               </ul>
             </div>
           </li>

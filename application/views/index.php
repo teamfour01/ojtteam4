@@ -319,9 +319,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
                 <ul class="navbar-nav">
                 <li class="nav-item"><a href="#" class="nav-link  text-dark">Home</a></li>
                 <li class="nav-item"><a href="<?php echo base_url()?>main/service" class="nav-link  text-dark">Service</a></li>
+                <li class="nav-item"><a href="<?php echo base_url()?>main/searchflightin" class="nav-link  text-dark">Search Flight</a></li>
                 <li class="nav-item"><a href="<?php echo base_url()?>main/contact" class="nav-link  text-dark">Contact</a></li>
                 <li class="nav-item"><a href="<?php echo base_url()?>main/gallery" class="nav-link  text-dark">Gallery</a></li>
-                <li class="nav-item"><a href="<?php echo base_url()?>main/airportdet" class="nav-link  text-dark">Airport Details</a></li>
+                <li class="nav-item"><a href="<?php echo base_url()?>main/search" class="nav-link  text-dark">Airport Details</a></li>
             </ul>
             <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
             <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">register</button>

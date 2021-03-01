@@ -10,9 +10,32 @@
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
             <!---custom style---->
             <link rel="stylesheet" href="css/style.css">
-    </head>
-    <style>
-  nav{
+            <style>
+  *{
+  padding:0px;
+  margin:0px;
+}
+  table,td{
+    padding: 20px;
+    font-size: 20px;
+    border: 2px solid white;
+    border-collapse:collapse;
+    margin-left: 50px;
+    margin-top: 80px;
+    background-color: black;
+    color: white;
+  }
+  .bi{
+  background-image:url("../img/wp1853425.jpg");
+  background-size:cover;
+}
+
+h1{
+  text-align: center;
+  color: black;
+  font-size: 50px;
+}
+nav{
     font-size: 20px;
     background-color: rgba(0,0,0,0.8);
     
@@ -102,12 +125,11 @@ background-size:cover;
 text-align:center;
 color: rgba(0,0,0,0.5);
 }
-</style>
-
-
-
+  </style>
+    </head>
 <body class=" mt-5 bg-dark text-white">
-  <nav class="menubar">
+  
+   <nav class="menubar">
     <nav class=" navbar navbar-expand-lg top1">
       <div class="container-fluid">
         <a class="text-decoration-none text-white" href="#"><h1><h4>AFRS-ADMIN</h4></h1></a>
@@ -139,6 +161,7 @@ color: rgba(0,0,0,0.5);
 
                     <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/viewbooking">Booking Details</a></li>
                     <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/airportdetails">Airport Details</a></li>
+                     <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/viewflightdetails">Flight Details</a></li>
               </ul>
             </div>
           </li>
@@ -151,24 +174,30 @@ color: rgba(0,0,0,0.5);
     </nav>
   </div>
 </nav>
-
   <CENTER><h1>  FLIGHT DETAILS</h1></CENTER>  
 <fieldset>
-<form class="container" method="post" action="<?php echo base_url()?>main/addfdetails">
+  
+<form class="container" method="post" action="<?php echo base_url()?>main/updateflight">
+  <?php 
+    if(isset($user_data)) 
+    {
+      foreach($user_data->result() as $row1)
+      {
+      ?>
   <div class="form-group">
     <label>Flight Number:</label>
-    <input type="text" class="form-control" name="fno">
+    <input type="text" class="form-control" name="fno" value="<?php echo $row1->fno;?>">
   </div>
 
   <div class="form-group mt-2">
     <label>Flight Name:</label>
-    <input type="text" class="form-control" name="fname">
+    <input type="text" class="form-control" name="fname" value="<?php echo $row1->fname;?>">
   </div>
 
   <div class="form-group mt-2 col-md-4">
       <label >Departure</label>
       <select  class="form-control" name="departure">
-        <option selected>Choose...</option>
+        <option selected><?php echo $row1->departure;?></option>
         <option>TVM</option>
               <option>KOCHI</option>
               <option>KANNUR</option>
@@ -183,7 +212,7 @@ color: rgba(0,0,0,0.5);
     <div class="form-group col-md-4">
       <label >Arrival</label>
       <select  class="form-control" name="arrival">
-        <option selected>Choose...</option>
+        <option selected><?php echo $row1->arrival;?></option>
         <option>TVM</option>
               <option>KOCHI</option>
               <option>KANNUR</option>
@@ -196,21 +225,23 @@ color: rgba(0,0,0,0.5);
 
     <div class="form-group">
     <label >Departure Date:</label>
-    <input type="date" class="form-control" name="depdate">
+    <input type="date" class="form-control" name="depdate" value="<?php echo $row1->depdate;?>">
   </div>
   <div class="form-group">
     <label >Arrival Date:</label>
-    <input type="date" class="form-control" name="ardate">
+    <input type="date" class="form-control" name="ardate" value="<?php echo $row1->arrdate;?>">
   </div>
 
   <div class="form-group">
     <label >Departure Time:</label>
-    <input type="time" class="form-control" name="deptime">
+    <input type="time" class="form-control" name="deptime" value="<?php echo $row1->deptime;?>">
   </div>
 
   <div class="form-group">
     <label >Arrival Time:</label>
-    <input type="time" class="form-control" name="artime">
+    <input type="time" class="form-control" name="artime" value="<?php echo $row1->arrtime;?>">
+  </div>
+
   </div>
   label >Ticket Charge :</label>
   </div>
@@ -218,16 +249,18 @@ color: rgba(0,0,0,0.5);
 
   <div class="form-group">
     <label >First Class Charge :</label>
-    <input type="text" class="form-control" name="costfirst">
+    <input type="text" class="form-control" name="costfirst" value="<?php echo $row1->costfirst;?>">
   </div>
    <div class="form-group">
     <label >Economic Class Charge :</label>
-    <input type="text" class="form-control" name="costeconomic">
+    <input type="text" class="form-control" name="costeconomic" value="<?php echo $row1->costeconomic;?>">
   </div>
    <div class="form-group">
     <label >Buisness Class Charge :</label>
-    <input type="text" class="form-control" name="costbuisness">
+    <input type="text" class="form-control" name="costbuisness" value="<?php echo $row1->costbuisness;?>">
   </div>
+
+  
   <div>
     
   </div>
@@ -237,17 +270,17 @@ color: rgba(0,0,0,0.5);
   </div>
   <div class="form-group">
     <label>First Class:</label>
-    <input type="text" class="form-control" name="cfirst">
+    <input type="text" class="form-control" name="cfirst" value="<?php echo $row1->cfirst;?>">
   </div>
   
   <div class="form-group">
     <label>Economic Class:</label>
-    <input type="text" class="form-control" name="ceconomic">
+    <input type="text" class="form-control" name="ceconomic" value="<?php echo $row1->ceconomic;?>">
   </div>
 
   <div class="form-group">
     <label>Buisness Class:</label>
-    <input type="text" class="form-control" name="cbuisness">
+    <input type="text" class="form-control" name="cbuisness" value="<?php echo $row1->cbuisness;?>">
   </div>
   
 
@@ -257,21 +290,26 @@ color: rgba(0,0,0,0.5);
   </div>
   <div class="form-group">
     <label>First Class:</label>
-    <input type="text" class="form-control" name="afirst">
+    <input type="text" class="form-control" name="afirst" value="<?php echo $row1->afirst;?>">
   </div>
   
   <div class="form-group">
     <label>Economic Class:</label>
-    <input type="text" class="form-control" name="aeconomic">
+    <input type="text" class="form-control" name="aeconomic" value="<?php echo $row1->aeconomic;?>">
   </div>
 
   <div class="form-group">
     <label>Buisness Class:</label>
-    <input type="text" class="form-control" name="abuisness">
+    <input type="text" class="form-control" name="abuisness" value="<?php echo $row1->abuisness;?>">
   </div>
+  <input type="hidden" value="<?php echo $row1->id;?>" name="id">
   
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <input type="submit" name="submit">
 </form>
+<?php
+          }
+        } 
+        ?>
 </fieldset>
 </body>
 </html>

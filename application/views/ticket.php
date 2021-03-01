@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>first site</title>
-<meta charset=utf-8>
-            <meta name="viewport" content="width=device-width,initial-scale=1">
-            <!---Fontawesome--->
-            <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-            <!---Bootstrap5----->
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-            <!---custom style---->
-            <link rel="stylesheet" href="css/style.css">
-
+<title>ticket</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
-*{
-padding:0px;
-margin:0px;
+  *{
+  padding:0px;
+  margin:0px;
 }
-table,td{
-padding: 20px;
-font-size: 20px;
+  table,td{
+    padding: 20px;
+    font-size: 20px;
+    border: 2px solid white;
+    border-collapse:collapse;
+    margin-left: 50px;
+    margin-top: 80px;
+    background-color: black;
+    color: white;
+  }
+  .bi{
+  background-image:url("../img/wp1853425.jpg");
+  background-size:cover;
 }
-.bi{
-background-image:url("../img/23.jpg");
-background-size:cover;
-}
-h3{
-text-align: center;
-color: red;
-font-size: 50px;
+
+h1{
+  text-align: center;
+  color: black;
+  font-size: 50px;
 }
 nav{
     font-size: 20px;
@@ -104,7 +103,7 @@ text-align:center;
 color: rgba(0,0,0,0.7);
 }
 
-</style>
+  </style>
 </head>
 <body class="bi">
   <nav class="menubar">
@@ -140,64 +139,25 @@ color: rgba(0,0,0,0.7);
     </nav>
   </div>
 </nav>
+  <div >
+<div class="w3-container w3-grey w3-cell" style="width: 250px; background-image: url('../img/02.jpg');">
+  <input type="hidden" name="">
+</div>
+<div class="w3-container w3-white w3-cell">
+  <p><input type="text" name="name"></p>
+  <p><input type="email" name="email"></p>
+  <p><input type="text" name="booking number"></p>
+  <p><input type="text" name="flight number"></p>
+  <p><input type="text" name="amount"></p>
+</div>
 
-<h3 class="bg-primary text-white text-center">FLIGHT SEARCH</h3>
-<form style="margin-left: 450px" method="post" action="<?php echo base_url()?>main/searchaction">
-<fieldset style="width:430px;height:400px;background-color:rgba(0,0,0,0.3); margin-left: 20px; margin-top: 50px;">
-<legend><strong></strong></legend>
-<table>
-<tr>
-<td>
-Departure:</td>
-<td><input list="dep" name="departure" class="form-control">
-<datalist id="dep">
-<option value="KANNUR">
-	<option value="KOCHI">
-<option value="TVM">
-<option value="KOZHIKODE">
-<option value="CHENNAI">
-<option value="BANGALORE">
-  <option value="MUMBAI">
-</datalist></td>
-</tr>
-<tr>
-<td>
-Arrival:</td>
-<td><input list="arri" name="arrival" class="form-control">
-<datalist id="arri">
-<option value="KANNUR">
-	<option value="KOCHI">
-<option value="TVM">
-<option value="KOZHIKODE">
-<option value="CHENNAI">
-<option value="BANGALORE">
-  <option value="MUMBAI">
-</datalist></td>
-</tr>
-<tr>
-<td>
-Date:</td>
-<td><input type="date" name="depdate" class="form-control"></td>
-</tr>
-<tr><td><input type="submit" name="submit" value="Search"></td></tr>
-
-</table>
-
-</fieldset>
-
-</form>
-<script
-  src="https://code.jquery.com/jquery-3.5.1.js"integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous">
-</script>
-
-<!---Popper---->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-</script>
-
-<!---Custom Js-->
-<script src="js/script.js">
-
-
+<div class="w3-container w3-grey w3-cell">
+  <p><input type="text" name="name"></p>
+  <p><input type="email" name="email"></p>
+  <p><input type="text" name="booking number"></p>
+  <p><input type="text" name="flight number"></p>
+  <p><input type="text" name="amount"></p>
+</div>
+</div>
 </body>
 </html>

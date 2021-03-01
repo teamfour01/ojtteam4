@@ -38,6 +38,73 @@ h1{
     text-align: center;
     
   }
+  body{
+  background-image:url("../img/13.jpg");
+background-size:cover;
+}
+.menubar ul{
+  list-style:none;
+  display:inline-flex;
+  padding:5px;
+  margin-top: 0px;
+  font-size: 20px;
+}
+.menubar ul li a{
+  color:white;
+  text-decoration:none;
+  padding:10px;
+}
+.menubar ul li{
+     padding:15px;
+}
+.menubar ul li a:hover{
+  background-color:red;
+  display:block;
+  border-radius:10px;
+}
+.submenu1 {
+  display:none;
+  margin:10px;
+}
+.submenu2 {
+  display:none;
+  margin:10px;
+}
+.menubar ul li:hover .submenu1 {
+  display:block;
+  position:absolute;
+  background-color:rgba(0,0,0,0.5);
+  border-radius:20px;
+}
+.menubar ul li:hover .submenu2 {
+  display:block;
+  position:absolute;
+  background-color:rgba(0,0,0,0.5);
+  border-radius:20px;
+}
+.submenu1  ul{
+  display:block;
+}
+.submenu1 ul li{
+  border-bottom:2px solid red;
+}
+.submenu2  ul{
+  display:block;
+}
+.submenu2 ul li{
+  border-bottom:2px solid red;
+}
+.h2
+{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 50px;
+  
+}
+.head{
+text-align:center;
+color: rgba(0,0,0,0.7);
+}
 	</style>
 
 <body class="bi">
@@ -45,21 +112,36 @@ h1{
 	<nav class="menubar">
     <nav class=" navbar navbar-expand-lg top1">
       <div class="container-fluid">
-        	<a class="text-decoration-none text-white" href="#"><h1><h4>AFRS-updateview</h4></h1></a>
+        <a class="text-decoration-none text-white" href="#"><h1><h4>AFRS-USER</h4></h1></a>
       <div>
         <ul class="navbar-nav">
-          		<li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/user">Home</a></li>
-          		<li class="nav-item"> <a class="nav-link" href="#">Booking</a>
-          			<li class="nav-item"> <a class="nav-link" href="#">Profile</a>
-          		<li class="nav-item"> <a class="nav-link" href="#">View</a></li>
-          		<li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/index">Logout</a></li>
-         </ul>
-     		</div>
- 		</div>
-	</nav>
+          <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/user">Home</a></li>
+          <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/searchflight">Booking</a>
+          <li class="nav-item"> <a class="nav-link" href="#">Profile</a>
+            <div class="submenu1">
+        <ul>
+          <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/regupdate"">update</a></li>
+        </ul>
+      </div>
+          </li>
+          <li class="nav-item"> <a class="nav-link" href="#">VIEW</a>
+            <div class="submenu2">
+              <ul>
+                    <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/viewbookinguser">Booking Details</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/ticket">Ticket view</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/viewnotif">View Notification</a></li>
+              </ul>
+            </div>
+          </li>
+              <li class="nav-item"> <a class="nav-link" href="<?php echo base_url()?>main/index">Logout</a></li>
+    
+            </ul> 
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
 </nav>
-	
-
 	
 	<form style="margin-left: 450px" method="post" action="<?php echo base_url()?>main/reguserupdate">
 		<?php
