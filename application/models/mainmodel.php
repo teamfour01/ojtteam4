@@ -183,8 +183,12 @@ public function airportupdateform1 ($a,$id)
 
 
 }
-
+public function airportmodel($a)
+{
+$this->db->insert("airport",$a);
 }
 
-	
+
+
+}	
 ?>
